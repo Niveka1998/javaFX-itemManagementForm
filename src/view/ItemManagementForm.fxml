@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="461.0" prefWidth="689.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ItemManagementFormController">
+   <children>
+      <Label layoutX="44.0" layoutY="66.0" text="ID: " />
+      <Label layoutX="161.0" layoutY="66.0" text="Item name:" />
+      <Label layoutX="439.0" layoutY="66.0" text="Quantity:" />
+      <Label layoutX="38.0" layoutY="125.0" text="Price:" />
+      <Label layoutX="288.0" layoutY="126.0" text="Item description:" />
+      <TextField fx:id="txtId" layoutX="69.0" layoutY="62.0" prefHeight="26.0" prefWidth="49.0" />
+      <TextField fx:id="txtName" layoutX="248.0" layoutY="62.0" />
+      <TextField fx:id="txtQty" layoutX="505.0" layoutY="62.0" />
+      <TextField fx:id="txtPrice" layoutX="86.0" layoutY="122.0" />
+      <TextField fx:id="txtDescription" layoutX="412.0" layoutY="121.0" prefHeight="26.0" prefWidth="242.0" />
+      <Text fill="#3378cc" layoutX="153.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item Management Form">
+         <font>
+            <Font name="System Bold Italic" size="34.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tblItem" layoutX="33.0" layoutY="231.0" prefHeight="209.0" prefWidth="623.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="46.4000244140625" text="ID" />
+          <TableColumn fx:id="colName" prefWidth="104.0" text="Item Name" />
+            <TableColumn fx:id="colQty" prefWidth="58.4000244140625" text="Quantity" />
+            <TableColumn fx:id="colPrice" prefWidth="91.99993896484375" text="Price" />
+            <TableColumn fx:id="colDescription" prefWidth="318.4000244140625" text="Item Description" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnAdd" layoutX="455.0" layoutY="185.0" mnemonicParsing="false" onAction="#addItemOnAction" text="Add Item" />
+      <Button fx:id="btnRemove" layoutX="569.0" layoutY="185.0" mnemonicParsing="false" onAction="#removeItemOnAction" text="Remove Item" />
+   </children>
+</AnchorPane>
